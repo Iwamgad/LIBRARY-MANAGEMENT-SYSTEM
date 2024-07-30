@@ -5,7 +5,7 @@ public class Book {
 
     private String title;
     private String author;
-    private Long ISBN;
+    private String ISBN;
     private boolean isBorrowed;
 
 //    Constructors
@@ -16,7 +16,7 @@ public class Book {
     }
 
 
-    public Book(String title, String author, Long ISBN, boolean isBorrowed) {
+    public Book(String title, String author, String ISBN, boolean isBorrowed) {
         this.title = title;
         this.author = author;
         this.ISBN = ISBN;
@@ -24,7 +24,6 @@ public class Book {
     }
 
 //    Getters and setters
-
 
     public String getTitle() {
         return title;
@@ -42,11 +41,11 @@ public class Book {
         this.author = author;
     }
 
-    public Long getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
-    public void setISBN(Long ISBN) {
+    public void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 
@@ -74,7 +73,7 @@ public class Book {
 
 
         String status = (isBorrowed() == true) ? ("Borrowed"):("Available");
-        System.out.println("Title: " + getTitle() + " Author: " + getAuthor() + " ISBN: " + getISBN() + " Status: " + status);
+        System.out.println("[Title: " + getTitle() + ", Author: " + getAuthor() + ", ISBN: " + getISBN() + ", Status: " + status + "]");
     }
 
 
